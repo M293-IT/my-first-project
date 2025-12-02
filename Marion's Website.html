@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marion's Beauty Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#d96aa8;
+      --accent-dark:#b04f7f;
+      --muted:#6b6b6b;
+      --bg:#fff8fb;
+      --card:#ffffff;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Work Sans',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; color:#222; background:var(--bg); -webkit-font-smoothing:antialiased}
+    header{background:linear-gradient(180deg, rgba(217,106,168,0.06), transparent); padding:20px 24px; position:sticky; top:0; z-index:20}
+    .container{max-width:1100px; margin:0 auto}
+    .nav{display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:48px; height:48px; background:var(--accent); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; box-shadow:0 6px 18px rgba(176,79,127,0.12)}
+    nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    nav a{color:#333; text-decoration:none; font-weight:600}
+    .hero{padding:48px 24px 56px}
+    .hero-grid{display:grid; grid-template-columns:1fr 420px; gap:36px; align-items:center}
+    .card{background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 6px 20px rgba(17,17,17,0.06)}
+    h1{font-family:'Libre Baskerville', serif; margin:0 0 8px; font-size:34px; color:#2b2b2b}
+    p.lead{margin:0 0 18px; color:var(--muted); line-height:1.6}
+    .cta{display:inline-block; background:var(--accent); color:#fff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700}
+    .intro-features{display:flex; gap:12px; margin-top:14px}
+    .feature{background:linear-gradient(180deg,#fff,#fff); padding:10px 12px; border-radius:10px; font-weight:600; color:var(--muted)}
+
+    /* About / two-column */
+    .about{padding:30px 24px}
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+
+    /* Services / Products */
+    .grid-cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+    .service{padding:16px; border-radius:12px; background:linear-gradient(180deg,#fff,#fff); border:1px solid #f0e7ef}
+    .service h4{margin:0 0 8px}
+    .service p{margin:0; color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+    .gallery img{width:100%; height:140px; object-fit:cover; border-radius:10px}
+
+    /* Contact */
+    .contact{padding:30px 24px}
+    form{display:grid; gap:12px}
+    input, textarea{padding:12px; border-radius:10px; border:1px solid #e8d5e3; font-size:15px}
+    button{background:var(--accent); color:#fff; padding:12px; border-radius:10px; border:none; font-weight:700}
+
+    footer{padding:24px; text-align:center; color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <div style="font-weight:700">Marion's Beauty Shop</div>
+          <div style="font-size:13px; color:var(--muted)">Beauty • Care • Confidence</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="card">
+            <h1>Welcome to Marion's Beauty Shop</h1>
+            <p class="lead">Your local destination for professional hair, skin and nail services — delivered with care, skill and a friendly smile. We help you look and feel your best for every occasion.</p>
+            <a class="cta" href="#contact">Book an Appointment</a>
+            <div class="intro-features" style="margin-top:18px">
+              <div class="feature">Experienced Stylists</div>
+              <div class="feature">Clean & Safe</div>
+              <div class="feature">Affordable Prices</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px; display:flex; gap:12px;">
+            <div class="card" style="flex:1">
+              <strong>Opening Hours</strong>
+              <p style="margin:8px 0 0; color:var(--muted)">Mon - Sat: 9:00 AM - 6:00 PM<br>Sun: Closed</p>
+            </div>
+            <div class="card" style="width:180px">
+              <strong>Contact</strong>
+              <p style="margin:8px 0 0; color:var(--muted)">+256 768 055475<br>amoitmarionsheilla@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="beauty" style="width:100%; border-radius:10px; display:block; margin-bottom:12px">
+            <h3 style="margin:0 0 8px">Featured Service</h3>
+            <p style="margin:0; color:var(--muted)">Bridal makeovers and full styling — tailored to your preferences with premium products.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container two-col">
+        <div class="card">
+          <h2>About Us</h2>
+          <p style="color:var(--muted)">Marion's Beauty Shop is a modern beauty center dedicated to delivering expert hair, skin and nail services. Founded by Marion, a passionate beauty professional, we focus on personalized care, hygiene and excellent results. We believe in enhancing natural beauty using quality products and techniques that suit each client.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mission & Vision</h3>
+          <p style="margin:0 0 8px"><strong>Our Mission</strong><br>To provide exceptional beauty services and quality products that enhance our clients’ natural beauty, boost their confidence, and promote self-care.</p>
+          <p style="margin:0"><strong>Our Vision</strong><br>To become a trusted beauty destination known for excellence, innovation and outstanding customer service in our community.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="padding:18px 24px">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Services</h2>
+        <div class="grid-cards">
+          <div class="service card">
+            <h4>Hair Styling & Braiding</h4>
+            <p>Box braids, twists, cornrows, wig installations, cuts and styling.</p>
+          </div>
+          <div class="service card">
+            <h4>Skin & Facial Treatments</h4>
+            <p>Deep cleansing facials, steaming, exfoliation and glowing treatments.</p>
+          </div>
+          <div class="service card">
+            <h4>Makeup & Events</h4>
+            <p>Professional makeup for weddings, photoshoots and special events.</p>
+          </div>
+          <div class="service card">
+            <h4>Nail Care</h4>
+            <p>Manicure, pedicure, acrylics, gel polish and nail art.</p>
+          </div>
+          <div class="service card">
+            <h4>Eyebrows & Lashes</h4>
+            <p>Shaping, tinting and eyelash extensions for a defined look.</p>
+          </div>
+          <div class="service card">
+            <h4>Hair Treatments</h4>
+            <p>Deep conditioning, relaxers and scalp care treatments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" style="padding:18px 24px">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Products</h2>
+        <div class="grid-cards">
+          <div class="service card">
+            <h4>Hair Extensions & Wigs</h4>
+            <p>Quality human-hair and synthetic options in many styles.</p>
+          </div>
+          <div class="service card">
+            <h4>Skincare</h4>
+            <p>Cleansers, moisturizers, serums and natural oils.</p>
+          </div>
+          <div class="service card">
+            <h4>Makeup</h4>
+            <p>Foundations, lipsticks, palettes and brushes.</p>
+          </div>
+          <div class="service card">
+            <h4>Nail Products</h4>
+            <p>Polishes, gels and nail care kits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:18px 24px">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Gallery</h2>
+        <div class="card gallery">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="gallery1">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="gallery2">
+          <img src="https://images.unsplash.com/photo-1520975917558-8d5b7e8b3f3f?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="gallery3">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 style="margin:0 0 12px">Contact & Bookings</h2>
+        <div class="two-col">
+          <div class="card">
+            <p style="margin:0 0 12px">To book an appointment, call or send us a message. Walk-ins are welcome based on availability.</p>
+            <p style="margin:0"><strong>Phone:</strong> +256 768 055475<br><strong>Email:</strong> amoitmarionsheilla@gmail.com<br><strong>Address:</strong> Tororo Town, Uganda</p>
+          </div>
+
+          <div class="card">
+            <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll contact you shortly.');">
+              <input type="text" placeholder="Full Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="text" placeholder="Phone">
+              <textarea rows="4" placeholder="Message / Appointment details"></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin:0">© <span id="year"></span> Marion's Beauty Shop — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
